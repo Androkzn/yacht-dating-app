@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Another_Dating_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksu-4D-ACi" userLabel="SettingButton">
+                                <rect key="frame" x="297" y="64" width="60" height="60"/>
+                                <state key="normal" image="wheel60white"/>
+                                <connections>
+                                    <action selector="settingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8b-oh-I7g"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="170" translatesAutoresizingMaskIntoConstraints="NO" id="TqB-sh-t6j" userLabel="LikesView">
+                                <rect key="frame" x="57" y="757" width="300" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJy-gA-UJI" userLabel="DislikeButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="VA3-bn-fLE"/>
+                                            <constraint firstAttribute="height" constant="65" id="sLi-fs-Y7X"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.064937464892864227" green="0.201119065284729" blue="0.34328112006187439" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="hand.thumbsdown" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dislikeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0H-EP-ais"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znu-kz-pEB" userLabel="LikeButton">
+                                        <rect key="frame" x="235" y="0.0" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="6tW-cu-koE"/>
+                                            <constraint firstAttribute="width" constant="65" id="tEf-ay-mLC"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.064937464892864227" green="0.201119065284729" blue="0.34328112006187439" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="hand.thumbsup" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="51"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="likeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OEP-Ss-pRb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHl-fN-cik" userLabel="Settings View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="218" translatesAutoresizingMaskIntoConstraints="NO" id="9nI-Ty-k7d">
+                                        <rect key="frame" x="30" y="71" width="351" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSw-0c-jEG">
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iov-7E-7KX">
+                                                <rect key="frame" x="302" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="darkModeToogle:" destination="BYZ-38-t0r" eventType="valueChanged" id="4LR-5S-Zls"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="YO5-1j-dfU">
+                                        <rect key="frame" x="30" y="127" width="354" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwK-Y0-1GB">
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="17" minValue="10" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="C8y-fL-zxZ">
+                                                <rect key="frame" x="121" y="0.0" width="235" height="31"/>
+                                                <connections>
+                                                    <action selector="fontSizeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="SQy-9q-lgY"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Da-66q">
+                                        <rect key="frame" x="185.66666666666666" y="182" width="43" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wq9-0l-ja3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YO5-1j-dfU" secondAttribute="trailing" constant="30" id="0kM-nl-3OI"/>
+                                    <constraint firstItem="YO5-1j-dfU" firstAttribute="leading" secondItem="GHl-fN-cik" secondAttribute="leading" constant="30" id="2e7-3c-lgc"/>
+                                    <constraint firstItem="YO5-1j-dfU" firstAttribute="top" secondItem="9nI-Ty-k7d" secondAttribute="bottom" constant="25" id="6W9-ea-Q0I"/>
+                                    <constraint firstItem="NqA-Da-66q" firstAttribute="bottom" secondItem="GHl-fN-cik" secondAttribute="bottomMargin" id="Fun-tR-SLG"/>
+                                    <constraint firstItem="NqA-Da-66q" firstAttribute="top" secondItem="YO5-1j-dfU" secondAttribute="bottom" constant="25" id="NXy-ef-uPS"/>
+                                    <constraint firstItem="NqA-Da-66q" firstAttribute="centerX" secondItem="GHl-fN-cik" secondAttribute="centerX" id="dcg-Cd-Fzz"/>
+                                    <constraint firstItem="9nI-Ty-k7d" firstAttribute="leading" secondItem="YO5-1j-dfU" secondAttribute="leading" id="jNn-0K-gFo"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart100" translatesAutoresizingMaskIntoConstraints="NO" id="mQV-6r-TVG">
+                                <rect key="frame" x="57" y="337" width="300" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yCX-RV-02p">
+                                <rect key="frame" x="47" y="260" width="320" height="438"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugj-lQ-vvg">
+                                        <rect key="frame" x="10" y="325" width="300" height="105"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Hi! I am 17 years old beautiful yacht from Vancouver Island. I am a smart cookie and love adventures. Take me around the world trip! </string>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boat1" translatesAutoresizingMaskIntoConstraints="NO" id="ZQt-uk-Ct0">
+                                        <rect key="frame" x="10" y="-13" width="300" height="350"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C3k-LB-bJX" userLabel="CenterView">
+                                <rect key="frame" x="57" y="221.66666666666663" width="300" height="463"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boat1" translatesAutoresizingMaskIntoConstraints="NO" id="fdp-eK-wzh">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="bre-O6-bhF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-19-IqC">
+                                        <rect key="frame" x="0.0" y="358" width="300" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="GAH-p1-rly"/>
+                                        </constraints>
+                                        <string key="text">Hi! I am 17 years old beautiful yacht from Vancouver Island. I am a smart cookie and love adventures. Take me around the world trip! </string>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="709-MF-DyC" appends="YES" id="t9b-zk-ZSC"/>
+                                </connections>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Ksu-4D-ACi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2Nc-RR-f9R"/>
+                            <constraint firstItem="Ksu-4D-ACi" firstAttribute="trailing" secondItem="C3k-LB-bJX" secondAttribute="trailing" id="599-X4-pNI"/>
+                            <constraint firstItem="GHl-fN-cik" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="BgX-1K-4ol"/>
+                            <constraint firstItem="GHl-fN-cik" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="GMB-4m-jQg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TqB-sh-t6j" secondAttribute="bottom" constant="40" id="K5v-Xp-KIw"/>
+                            <constraint firstItem="C3k-LB-bJX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Kbv-la-G65"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ksu-4D-ACi" secondAttribute="trailing" constant="57" id="UcJ-0w-0Ch"/>
+                            <constraint firstAttribute="bottom" secondItem="GHl-fN-cik" secondAttribute="bottom" constant="672" id="cOV-il-KVg"/>
+                            <constraint firstItem="GHl-fN-cik" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ml4-eu-fA0"/>
+                            <constraint firstItem="C3k-LB-bJX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="x7w-2u-eyw"/>
+                            <constraint firstItem="TqB-sh-t6j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yI0-K1-zMM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="C3k-LB-bJX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="centerView" destination="C3k-LB-bJX" id="V9h-E0-p6v"/>
+                        <outlet property="dislikeButtonOutlet" destination="CJy-gA-UJI" id="bMy-0T-tDS"/>
+                        <outlet property="likeButtonOutlet" destination="znu-kz-pEB" id="yid-nF-q7q"/>
+                        <outlet property="mainLabel" destination="dkg-19-IqC" id="i9Q-MA-hVe"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="Nqy-hi-23B"/>
+                        <outlet property="reactionImage" destination="mQV-6r-TVG" id="G5d-at-Xh7"/>
+                        <outlet property="seetingsView" destination="GHl-fN-cik" id="60o-Sz-sal"/>
+                        <outlet property="settingButtonOutlet" destination="Ksu-4D-ACi" id="eJJ-S0-cSf"/>
+                        <outlet property="viewMain" destination="yCX-RV-02p" id="UFc-sJ-Pun"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="709-MF-DyC">
+                    <connections>
+                        <action selector="panGestureCenterView:" destination="BYZ-38-t0r" id="smX-ka-dyd"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="boat1" width="344" height="354"/>
+        <image name="hand.thumbsdown" catalog="system" width="64" height="64"/>
+        <image name="hand.thumbsup" catalog="system" width="64" height="64"/>
+        <image name="heart100" width="50" height="50"/>
+        <image name="wheel60white" width="60" height="60"/>
+    </resources>
+</document>
